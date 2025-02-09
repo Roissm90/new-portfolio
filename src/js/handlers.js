@@ -31,7 +31,7 @@ $(document).ready(function () {
         let section = $('.section-' + sectionTarget);
 
         if (section.length) {
-            $('html, body').animate({ scrollTop: section.offset().top }, 600);
+            $('html, body').animate({ scrollTop: section.offset().top - 60 }, 600);
         }
     });
 
