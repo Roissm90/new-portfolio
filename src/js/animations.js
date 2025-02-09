@@ -159,6 +159,9 @@ function initAnimationSkills() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) {
+        return;
+    }
     initAnimationExperience();
     initAnimationSkills();
     window.addEventListener("resize", function() {
