@@ -1,0 +1,56 @@
+@import './variables';
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    color: $customwhite;
+}
+
+nav,
+section,
+footer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden auto;
+
+    @media (max-width: 768px) {
+        width: 95%;
+    }
+}
+
+.btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: transparent;
+    border: 1px solid $customwhite;
+    border-radius: 50px;
+
+    &:hover {
+        padding: 20px 50px;
+        transition: all ease-in-out 0.5s;
+    }
+}
+
+.shadow-hover {
+    &:hover {
+        box-shadow: 2px 2px 5px 0px $customwhite;
+        transition: all ease-in-out 0.2s;
+    }
+}

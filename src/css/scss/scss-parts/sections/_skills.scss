@@ -1,0 +1,230 @@
+.section-skills {
+    padding: clamp(40px, 7vw, 100px) 0;
+
+    .container {
+        overflow: hidden;
+
+        .section-title {
+            margin-bottom: 100px;
+        }
+
+        .wrapper-content {
+            .content-title {
+                //display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 5%;
+                align-items: center;
+                margin-bottom: 40px;
+                display: none;
+
+                .section-subtitle {
+                    width: 35%;
+                    text-align: center;
+                    transition: all ease 0.3s;
+                    padding: 5px 0;
+                    text-wrap: nowrap;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    &.active {
+                        width: 60%;
+                    }
+                }
+            }
+            .content-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 120px;
+
+                .wrapper-list {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    gap: 5%;
+                    position: relative;
+
+                    .section-subtitle {
+                        position: absolute;
+                        top: -60px;
+                        left: 0;
+                        width: 47.5%;
+                        @media (max-width: 1025px) {
+                            width: 65%;
+                        }
+                        text-align: left;
+
+                        &:after {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            content: "";
+                            display: block;
+                            height: 1px;
+                            background-color: $customwhite;
+                        }
+                    }
+
+                    .list {
+                        width: 65%;
+                        @media (min-width: 1025px) {
+                            width: 47.5%;
+                        }
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 10px;
+                        align-self: flex-start;
+    
+                        .paragraph {
+                            width: 100%;
+                            text-align: left;
+                            position: relative;
+                            padding-left: 40px;
+
+                            &:before {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                //transform: translateY(-50%);
+                                content: "</>";
+                                display: block;
+                                background-color: transparent;
+                                color: $customwhite;
+                            }
+                        }
+                    }
+
+                    .box-image {
+                        width: 30%;
+                        @media (min-width: 1025px) {
+                            width: 47.5%;
+                        }
+                        clip-path: polygon(0% 0%, 90% 10%, 100% 100%, 10% 90%);
+
+                        .picture {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            max-width: 400px;
+                        }
+                    }
+
+                    &.reverse {
+                        flex-direction: row-reverse;
+
+                        .section-subtitle {
+                            text-align: left;
+                            left: initial;
+                            right: 0;
+                        }
+
+                        .box-image {
+                            clip-path: polygon(10% 10%, 100% 0%, 90% 90%, 0% 100%);
+                        }
+
+                        .list {
+                            .paragraph {
+                                //text-align: right;
+                                //padding-left: 0;
+                                //padding-right: 30px;
+                                //&:before {
+                                //    left: 0;
+                                //    right: 0;
+                                //}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section-skills {
+        .container {
+            .section-title {
+                margin-bottom: 20px;
+            }
+
+            .wrapper-content {
+                .content-title {
+                    display: flex;
+                    .section-subtitle {
+                        border-radius: 50px;
+                        cursor: pointer;
+                        
+                        &.active {
+                            background-color: $customwhite;
+                            color: $bluedark;
+                        }
+                    }
+                }
+                .content-list {
+                    .wrapper-list {
+                        &.hide {
+                            display: none;
+                        }
+                    }
+                    .section-subtitle {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .section-skills {
+        .container {
+            .wrapper-content {
+                .content-list {
+                    .wrapper-list {
+                        flex-direction: column-reverse;
+                        gap: 40px;
+
+                        .list {
+                            width: 100%;
+                        }
+                        .box-image {
+                            width: 100%;
+                            max-width: 150px;
+                        }
+
+                        &.reverse {
+                            flex-direction: column-reverse;
+                            gap: 40px;
+
+                            .list {
+                                width: 100%;
+
+                                .paragraph {
+                                    text-align: right;
+                                    padding-left: 0;
+                                    padding-right: 40px;
+
+                                    &:before {
+                                        left: initial;
+                                        right: 0;
+                                    }
+                                }
+                            }
+                            .box-image {
+                                width: 100%;
+                                max-width: 150px;
+                                align-self: flex-end
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

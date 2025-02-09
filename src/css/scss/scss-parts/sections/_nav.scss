@@ -1,0 +1,117 @@
+@import '../variables';
+
+.nav {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: fit-content;
+    width: 100%;
+    background-color: transparent;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    overflow: visible;
+
+    &.bg-bluedark {
+        background-color: rgba(0, 31, 52, 0.8);
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        overflow: visible;
+
+        .nav-list {
+            display: flex;
+            justify-content: flex-start;
+            gap: clamp(20px, 5vw, 40px);
+            align-items: center;
+
+            .list-item {
+                position: relative;
+                padding-bottom: 5px;
+                cursor: pointer;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 0;
+                    background-color: $customwhite;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:hover {
+                    &:after {
+                        width: 100%;
+                        transition: width ease-in-out 0.3s;
+                    }
+                }
+                &.active {
+                    &:after {
+                        width: 100%;
+                        transition: width ease-in-out 0.3s;
+                    }
+                }
+            }
+        }
+
+        .wrapper-lang {
+            position: relative;
+
+            .lang-text {
+                position: relative;
+                cursor: pointer;
+
+                &:after {
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    border-right: 1px solid $customwhite;
+                    border-bottom: 1px solid $customwhite;
+                    content: "";
+                    display: block;
+                    transform: rotate(45deg);
+                    top: 0;
+                    left: -20px;
+                }
+            }
+
+            .wrapper-lang-btns {
+                display: none;
+                position: absolute;
+                top: 30px;
+                right: 0;
+                border: 1px solid #F7F1F2;
+                border-radius: 10px;
+                overflow: hidden;
+                
+                .lang-btn {
+                    outline: none;
+                    padding: 5px;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-width: 80px;
+                    aspect-ratio: 2;
+                    cursor: pointer;
+                    border-bottom: 1px solid #F7F1F2;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    &:hover {
+                        background-color: $customwhite;
+                        color: $bluedark;
+                        transition: all ease 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}

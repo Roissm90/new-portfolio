@@ -1,0 +1,39 @@
+$customwhite: #F7F1F2;
+$purewhite: #FFFFFF;
+$pureblack: #000000;
+$greyblue: #DFF5FC;
+$greylight: #787f84;
+$greymedium: #676e73;
+$greymedium--2: #2A2A2A;
+$greydark: #373737;
+$button--lines: #E6E1E5;
+$grey--lines: #434749;
+$red--error: #ED4B18;
+$red: #f00;
+$reddark:#800000;
+$bluedark: #001f34;
+
+$colors: (
+    purewhite: $purewhite,
+    pureblack: $pureblack,
+    greylight: $greylight,
+    greydark: $greydark,
+    reddark: $reddark,
+    bluedark: $bluedark,
+    white: $customwhite
+);
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+      background-color: $color;
+    }
+  
+    .color-#{$name} {
+      color: $color;
+    }
+  
+    .border-#{$name} {
+      border-color: $color;
+    }
+  }
+  

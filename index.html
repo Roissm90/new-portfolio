@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./src/css/scss/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Importa el CSS de Slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- Importa la librería de Slick -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body class="bg-bluedark">
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="list-item color-white paragraph--link translate" data-section="about-me">Myself</li>
+                <li class="list-item color-white paragraph--link translate" data-section="experience">Experience</li>
+                <li class="list-item color-white paragraph--link translate" data-section="skills">Skills</li>
+            </ul>
+            <div class="wrapper-lang">
+                <span class="lang-text color-customwhite paragraph-small"></span>
+                <div class="wrapper-lang-btns">
+                    <button type="button" class="lang-btn bg-bluedark color-customwhite">EN</button>
+                    <button type="button" class="lang-btn bg-bluedark color-customwhite">ES</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section-about-me" data-first="first-section">
+        <div class="container">
+            <div class="col col-left">
+                <p class="eyebrow section-title color-white translate">Hello, I'm</p>
+                <h1 class="title color-white">Santiago Martínez</h1>
+                <p class="paragraph-small color-white">Front-End Developer</p>
+                <a href="./src/public/documents/cv.pdf" target="_blank" class="link-cv btn shadow-hover">
+                    <span class="link-cv-text paragraph-small translate" color-white>Download CV</span>
+                    <img src="./src/public/images/download.png" alt="icon-download" title="icon-download" class="picture"/>
+                </a>
+            </div>
+            <div class="col col-right">
+                <div class="box-image">
+                    <img src="./src/public/images/selfie.png" alt="image-self" title="image-self" class="picture"/>
+                </div>
+                <div class="box-links">
+                    <a href="https://www.linkedin.com/in/roissm90/" target="_blank" class="link link-linkedin">
+                        <span class="text">LinkedIn</span>
+                        <img src="./src/public/images/linkedin.png" alt="icon-linkedin" title="icon-linkedin" class="picture"/>
+                    </a>
+                    <a href="https://github.com/Roissm90" target="_blank" class="link link-github">
+                        <span class="text">Git Hub</span>
+                        <img src="./src/public/images/github.png" alt="icon-github" title="icon-github" class="picture"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-experience bg-white">
+        <div class="container">
+            <h2 class="section-title color-bluedark left from-bottom translate">Experience</h2>
+            <div class="gallery-container">
+                <div class="row row-one from-left">
+                    <div class="wrapper-content">
+                        <div class="box box-image bottom">
+                            <img src="./src/public/images/wordpress.jpg" alt="" title="" class="picture top"/>
+                            <img src="./src/public/images/zion_builder.jpg" alt="" title="" class="picture bottom"/>            
+                        </div>
+                        <div class="box box-list top">
+                            <p class="color-greydark section-subtitle translate">Website Maintenance</p>
+                            <ul class="content-list">
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Endesaluzempresas</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Endesaopenempresas</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Luzempresasendesa</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Escolhaendesa</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Endesatarifaonline</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-two from-right">
+                    <div class="wrapper-content reverse">
+                        <div class="box box-image bottom">
+                            <img src="./src/public/images/wordpress.jpg" alt="" title="" class="picture top"/>
+                            <img src="./src/public/images/acf.jpg" alt="" title="" class="picture bottom"/>            
+                        </div>
+                        <div class="box box-list top">
+                            <p class="color-greydark section-subtitle translate">Website Maintenance</p>
+                            <ul class="content-list">
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Ayesa</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small" class="color-greydark">
+                                    <a href="" target="_blank" class="color-greydark">Cegid</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-three from-left-second">
+                    <div class="wrapper-content">
+                        <div class="box box-image bottom">
+                            <img src="./src/public/images/react.jpg" alt="" title="" class="picture top"/>
+                            <img src="./src/public/images/php.jpg" alt="" title="" class="picture bottom"/>            
+                        </div>
+                        <div class="box box-list top">
+                            <p class="color-greydark section-subtitle translate">Projects participation</p>
+                            <ul class="content-list">
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Accumin</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Principe Academy</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small" class="color-greydark">
+                                    <a href="" target="_blank" class="color-greydark">Suchard</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="row row-four from-right-second">
+                    <div class="wrapper-content reverse">
+                        <div class="box box-image bottom">
+                            <img src="./src/public/images/wordpress.jpg" alt="" title="" class="picture"/>            
+                        </div>
+                        <div class="box box-list top">
+                            <p class="color-greydark section-subtitle translate">Projects participation</p>
+                            <ul class="content-list">
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Endesaluzempresas</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Endesaopenempresas</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Luzempresasendesa</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Escolhaendesa</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Endesatarifaonline</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small">
+                                    <a href="" target="_blank" class="color-greydark">Ayesa</a>
+                                </li>
+                                <li class="content-list-item paragrapgh-small" class="color-greydark">
+                                    <a href="" target="_blank" class="color-greydark">Cegid</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+    <section class="section-skills">
+        <div class="container">
+            <h2 class="section-title color-white from-bottom translate">Skills</h2>
+            <div class="wrapper-content">
+                <div class="content-title from-bottom">
+                    <h3 class="section-subtitle color-white active translate" data-skills="soft">Soft Skills</h3>
+                    <h3 class="section-subtitle color-white translate" data-skills="hard">Hard Skills</h3>
+                </div>
+                <div class="content-list">
+                    <div class="wrapper-list from-left" data-skills="soft">
+                        <h3 class="section-subtitle color-white translate">Soft Skills</h3>
+                        <ul class="list soft-skills">
+                            <li class="soft-skill-item paragraph translate">Effective communication</li>
+                            <li class="soft-skill-item paragraph translate">Teamwork</li>
+                            <li class="soft-skill-item paragraph translate">Time management</li>
+                            <li class="soft-skill-item paragraph translate">Attention to detail</li>
+                            <li class="soft-skill-item paragraph translate">Patience and frustration tolerance</li>
+                            <li class="soft-skill-item paragraph translate">Self-learning and continuous learning</li>
+                            <li class="soft-skill-item paragraph translate">Empathy</li>
+                        </ul>
+                        <div class="box-image">
+                            <img class="picture" src="src/public/images/soft_skills.jpeg" alt="imagen de soft skills"/>
+                        </div>
+                    </div>
+                    <div class="wrapper-list reverse from-right" data-skills="hard">
+                        <h3 class="section-subtitle color-white translate">Hard Skills</h3>
+                        <ul class="list hard-skills">
+                            <li class="hard-skill-item paragraph translate">Semantic and sustainable HTML structuring</li>
+                            <li class="hard-skill-item paragraph translate">Advanced CSS (Flexbox, Grid, animations, variables, BEM, etc.)</li>
+                            <li class="hard-skill-item paragraph translate">CSS preprocessors (SASS, LESS)</li>
+                            <li class="hard-skill-item paragraph translate">JavaScript (ES6+ and modern concepts)</li>
+                            <li class="hard-skill-item paragraph translate">React.js (Hooks, Context API, performance optimization, etc.)</li>
+                            <li class="hard-skill-item paragraph translate">Componentization and code reusability in React</li>
+                            <li class="hard-skill-item paragraph translate">WordPress frontend maintenance and management</li>
+                        </ul>
+                        <div class="box-image">
+                            <img class="picture" src="src/public/images/hard_skills.jpeg" alt="imagen de hard skills"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <a href="tel:625573853" class="footer-item telf color-white paragraph">625 573 853</a>
+            <a href="mailto:roissm90@gmail.com" class="footer-item email color-white paragraph">roissm90@gmail.com</a>
+        </div>
+    </footer>
+    <script src="./src/js/lang.js"></script>
+    <script src="./src/js/handlers.js"></script>
+    <script src="./src/js/animations.js"></script>
+    <script src="./src/js/gallery.js"></script>
+</body>
+</html>

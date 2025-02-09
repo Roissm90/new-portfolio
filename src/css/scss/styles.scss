@@ -1,0 +1,13 @@
+//main imports
+@import 
+'./scss-parts/base',
+'./scss-parts/typography',
+'./scss-parts/variables';
+
+//sections imports
+@import
+'./scss-parts/sections/nav',
+'./scss-parts/sections/about-me',
+'./scss-parts/sections/experience',
+'./scss-parts/sections/skills',
+'./scss-parts/sections/footer';
