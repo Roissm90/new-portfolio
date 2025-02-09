@@ -63,23 +63,24 @@ function initAnimationExperience() {
             duration: 1, 
             ease: "power3.out" 
         })
-        .from(".section-experience .from-right-second", { 
+        /*.from(".section-experience .from-right-second", { 
             opacity: 0, 
             x: 100, 
             duration: 1, 
             ease: "power3.out" 
-        }, "-=0.6");
+        }, "-=0.6");*/
     } else {
         let tlMobile = gsap.timeline({
             scrollTrigger: {
-                trigger: ".section-experience",
+                trigger: ".section-skills",
                 start: "top 80%",
                 end: "bottom 80%",
-                scrub: 2,
+                scrub: 1,
                 toggleActions: "play none none none",
                 markers: false
             }
         });
+        
         // Animación de elemento
         tlMobile.from(".section-experience .from-bottom", { 
             opacity: 0, 
@@ -136,7 +137,7 @@ function initAnimationSkills() {
                 trigger: ".section-skills",
                 start: "top 80%",
                 end: "bottom 100%",
-                scrub: 2,
+                scrub: 1,
                 toggleActions: "play none none none",
                 markers: false
             }
