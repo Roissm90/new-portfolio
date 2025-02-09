@@ -823,7 +823,7 @@ footer {
   }
 }
 .section-skills {
-  padding: clamp(40px, 7vw, 100px) 0;
+  padding: clamp(40px, 7vw, 100px) 0 100px;
 }
 .section-skills .container {
   overflow: hidden;
@@ -947,6 +947,7 @@ footer {
   -webkit-clip-path: polygon(10% 10%, 100% 0%, 90% 90%, 0% 100%);
           clip-path: polygon(10% 10%, 100% 0%, 90% 90%, 0% 100%);
 }
+
 @media (max-width: 768px) {
   .section-skills .container .section-title {
     margin-bottom: 20px;
