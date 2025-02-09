@@ -160,6 +160,7 @@ function initAnimationSkills() {
 
 document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth <= 768) {
+        console.log('no hay animacion')
         return;
     }
     initAnimationExperience();
